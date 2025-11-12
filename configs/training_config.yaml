@@ -1,0 +1,27 @@
+seed: 42
+device: auto
+data:
+  dataset: CIFAR10
+  root: ./data
+  num_workers: 4
+  batch_size: 256
+  aug:
+    random_crop: true
+    random_flip: true
+    mixup_alpha: 0.1
+model:
+  name: RoutingNet
+  channels: 48
+  num_classes: 10
+train:
+  epochs: 40
+  optimizer:
+    name: sgd
+    lr: 0.1
+    momentum: 0.9
+    weight_decay: 0.0005
+  scheduler:
+    name: cosine
+log:
+  interval: 100
+  tensorboard: false
