@@ -6,3 +6,15 @@ __pycache__/
 data/
 runs/
 outputs/
+
+# Model checkpoints
+*.pth
+*.pt
+
+# Experiment tracking
+.wandb/
+
+# Type checking and testing
+.mypy_cache/
+.pytest_cache/
+.coverage
